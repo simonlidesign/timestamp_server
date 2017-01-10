@@ -22,4 +22,11 @@ app.get('/:time', (req, res) => {
     res.send(timestamp);
 });
 
+app.get('/', (req, res) =>{
+    var help = `
+        <p>This is my implmentation of the timestamp Service. For usage, please visit <a target="_blank" href="https://www.freecodecamp.com/challenges/timestamp-microservice">the project page on FreeCodeCamp</a>.</p>
+        `;
+    res.send(help);
+});
+
 app.listen(process.env.PORT || 8080);
